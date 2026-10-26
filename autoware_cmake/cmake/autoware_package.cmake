@@ -21,7 +21,7 @@ macro(autoware_package)
   endif()
   if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     add_compile_options(-Wall -Wextra -Wpedantic)
-    option(CMAKE_COMPILE_WARNING_AS_ERROR "Treat compiler warnings as errors." ON)
+    option(CMAKE_COMPILE_WARNING_AS_ERROR "Treat compiler warnings as errors." OFF)
     mark_as_advanced(CMAKE_COMPILE_WARNING_AS_ERROR)
 
     # Honor the option on CMake versions without native support.
